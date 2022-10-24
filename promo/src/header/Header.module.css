@@ -1,0 +1,154 @@
+.header {
+  background-color: #1d1d1d;
+  display: flex;
+  color: white;
+  justify-content: space-around;
+  height: 84px;
+}
+
+.logoWrapper {
+  cursor: default;
+  padding: 15px;
+  position: relative;
+}
+
+.logo {
+  width: 50px;
+  height: 50px;
+  background-color: #5de702;
+  border: 1px solid white;
+  position: absolute;
+  animation: turning 8s ease-out 2s infinite alternate;
+  box-shadow: 1px 1px 5px greenyellow;
+}
+
+.logo:hover {
+  animation-play-state: paused;
+}
+
+.logoText {
+  color: white;
+  font-size: 30px;
+  position: absolute;
+  top: 24%;
+  left: 64%;
+  font-family: 'Lobster', cursive;
+}
+
+.links {
+  top: 25px;
+  display: flex;
+  position: relative;
+  font-size: 20px;
+  flex-wrap: wrap;
+}
+
+.link {
+  margin: 0 30px;
+	color: #fff; 
+    position: relative;
+    cursor: pointer;
+    text-decoration: none;
+    transition: ease-in-out 0.3s;
+}
+.link:hover {
+  transform: scale(1.1);
+}
+.link:after {
+	content: "";
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 30px;
+    width: 0;
+    height: 2px;
+    background-color: #5ce600;
+    transition: width 0.3s;
+}
+
+.link:hover:after {
+	content: "";
+    width: 100%;
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 30px;
+    height: 2px;
+    background-color: #5ce600;
+    transition: width 0.5s;
+}
+
+.socialLinks {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: -10px;
+}
+.socialLinks a {
+  margin: 0 10px;
+}
+.socialLinks img {
+  width: 32px;
+  transition: ease-in-out 0.5s;
+}
+.socialLinks img:hover {
+  transform: rotate(360deg) scale(1.16);
+}
+.socialLinks__footer {
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  margin-right: -10px;
+}
+.socialLinks__footer a {
+  margin: 0 10px;
+}
+.socialLinks__footer img {
+  width: 32px;
+  transition: ease-in-out 0.5s;
+}
+.socialLinks__footer img:hover {
+  transform: rotate(360deg) scale(1.16);
+}
+
+@keyframes turning {
+  0% {
+    border-radius: 0 0 0 0;
+    transform: rotate(0deg);
+  }
+
+  25% {
+    border-radius: 50% 0 0 0;
+    transform: rotate(45deg);
+  }
+
+  50% {
+    border-radius: 50% 50% 0 0;
+    transform: rotate(90deg);
+  }
+
+  75% {
+    border-radius: 50% 50% 50% 0;
+    transform: rotate(135deg);
+  }
+
+  100% {
+    border-radius: 50% 50% 50% 50%;
+    transform: rotate(180deg);
+  }
+}
+
+@media (max-width: 740px) {
+  .links {
+    display: none;
+  }
+  .socialLinks {
+    display: none;
+  }
+  .header {
+    justify-content: flex-start;
+  }
+  .logoWrapper {
+    margin-left: 30px;
+  }
+}

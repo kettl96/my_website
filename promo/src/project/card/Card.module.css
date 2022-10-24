@@ -1,0 +1,156 @@
+.projectCard {
+  display: flex;
+  margin: 0 10px 80px 10px;
+}
+
+.projectCardReverse {
+  display: flex;
+  flex-direction: row-reverse;
+  margin: 0 10px 80px 10px;
+}
+
+.imgProject {
+  margin: 20px;
+  box-shadow: 0px 0px 12px rgba(62, 255, 23, 0.6);
+  width: 50vw;
+  transition: ease-in-out 0.4s;
+  position: relative;
+}
+
+.imgProject:hover {
+  transform: scale(1.05);
+}
+
+.description {
+  margin-top: 15px;
+  cursor: default;
+  text-align: end;
+  margin-right: 25px;
+  max-width: 550px;
+}
+
+.descriptionReverse {
+  margin-top: 15px;
+  cursor: default;
+  margin-left: 25px;
+  max-width: 550px;
+}
+
+.name {
+  font-size: 30px;
+  font-weight: 500;
+  color: rgb(90, 90, 90);
+}
+
+.descriptionReverse .text {
+  margin: 20px -50px 20px 0;
+}
+
+.text {
+  padding: 20px 20px 20px 30px;
+  background-color: rgba(197, 197, 197, 0.815);
+  margin: 20px 0px 20px -50px;
+  box-shadow: 0 0 8px black;
+  border-radius: 5px;
+  font-size: 18px;
+  position: relative;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  line-height: 1.4em;
+  transition: ease-in-out 0.4s;
+  color: rgb(46, 46, 46);
+}
+
+.tech {
+  margin: 0 3px;
+  font-family: 'Comic Neue', cursive;
+  font-weight: 600;
+  color: rgb(131, 131, 131);
+}
+
+.linksImg {
+  display: flex;
+}
+
+#link {
+  padding: 3px 0 0 3px;
+  width: 18px;
+}
+
+.linksImg img {
+  width: 24px;
+  position: absolute;
+}
+
+.linksImg div {
+  width: 25px;
+  height: 25px;
+  padding: 1px 0 0 1px;
+  border-radius: 50%;
+  background-color: rgba(51, 51, 51, 0.781);
+  transition: ease-in-out 0.3s;
+  margin: 15px 7px 5px 7px;
+  text-align: start;
+}
+
+.linksImg div:hover {
+  background-color: rgba(132, 219, 1, 0.925);
+  transform: scale(1.2);
+}
+
+@media (min-width: 1300px) {
+  .imgProject {
+    width: 40vw;
+  }
+}
+
+@media (max-width: 760px) {
+  .description {
+    z-index: 2;
+    margin-left: -35vw;
+  }
+  .descriptionReverse {
+    z-index: 2;
+    margin-right: -35vw;
+  }
+  .imgProject {
+    margin-top: 50px;
+    width: 60vw;
+  }
+  .tech {
+    color: rgb(53, 53, 53);
+  }
+}
+@media (max-width: 500px) {
+  .projectCard {
+    margin: 0 0px 30px 0px;
+  }
+  .projectCardReverse {
+    margin: 0 0px 30px 0px;
+  }
+  .description {
+    margin-left: -60vw;
+  }
+  .descriptionReverse {
+    margin-right: -60vw;
+  }
+  .imgProject {
+    margin-top: 60px;
+    width: 70vw;
+    opacity: .6;
+  }
+}
+@media (max-width: 450px) {
+  .description {
+    margin-left: -85vw;
+  }
+  .descriptionReverse {
+    margin-right: -85vw;
+  }
+  .imgProject {
+    margin-top: 10px;
+    width: 90vw;
+  }
+  .name {
+    color: rgb(46, 46, 46);
+  }
+}

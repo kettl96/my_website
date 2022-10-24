@@ -1,0 +1,118 @@
+.wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  padding: 50px 0;
+  background: rgb(216,255,188);
+  background: linear-gradient(0deg, rgba(216,255,188,1) 0%, rgba(255,255,255,1) 30%);
+}
+.wrapper img {
+  transform: rotate(-10deg);
+  width: 130px;
+}
+.coffee:hover {
+  animation: shake 1.5s linear infinite;
+}
+.title {
+  position: relative;
+  margin: 0 10px 0 50px;
+  align-items: center;
+  display: flex;
+  font-size: 52px;
+  font-family: 'Comic Neue', cursive;
+  cursor: default;
+}
+.btn {
+  border: 2px solid black;
+  margin: 0 0 0 20px;  
+}
+.btn button {
+  font-size: 42px;
+  border: none;
+  transform: translate(-10px, -10px);
+  background: rgb(198, 250, 120, 0.95);
+  padding: 8px 22px;
+  transition: ease-in-out 0.3s;
+}
+.btn button:hover {
+  cursor: pointer;
+  transform: translate(0, 0);
+}
+.smoke {
+  z-index: 10;
+  height: 100px;
+  top: -40px;
+  margin-left: -15px;
+  position: absolute;
+  animation: myOrbit 5s linear infinite;
+}
+
+@keyframes myOrbit {
+  0% {
+    opacity: 0;
+    transform: rotate(0deg) translateY(0);    
+  }
+  20% {
+    opacity: 1;
+    transform: rotate(-5deg) translateY(-3px);
+  }
+  50% {
+    opacity: 0.7;
+    transform: rotate(1deg) translateY(-12px);
+  }
+  100% {
+    transform: rotate(-7deg) translateY(-35px);
+    opacity: 0;
+  }
+}
+
+@keyframes shake {
+  0% {
+    transform: rotate(-10deg) ;    
+  }
+  50% {
+    transform: rotate(-12deg) translate(10px, 0px);
+  }
+  100% {
+    transform: rotate(-10deg) translate(0, 0);
+  }
+}
+
+@media (max-width: 650px) {
+  .wrapper {
+    height: 170px;
+    padding-top: 10px;
+  }
+  .title {
+    position: relative;
+    z-index: 3;
+    text-shadow: 0 0 1px rgba(0, 0, 0, 0.795);
+    margin: 65px 0 0 0;
+    height: 50px;
+  }
+  .smoke {
+    left: 20vw;
+  }
+  .coffee {
+    position: absolute;
+    left: 19vw;
+    margin-top: 17px;
+    z-index: 1;
+  }
+}
+@media (max-width: 410px) {
+  .title {
+    font-size: 10vw;
+  }
+  .btn {
+    transform: scale(0.8);
+    margin-left: 0px;
+  }
+  .coffee {
+    margin-top: 12px;
+    left: 13vw;
+  }
+  .smoke {
+    left: 13vw;
+  }
+}

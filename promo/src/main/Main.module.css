@@ -1,0 +1,64 @@
+.mainWrapper {
+  display: flex;
+  border-bottom: 2px solid rgb(199, 199, 199);
+  overflow: hidden;
+  height: 80vh;
+  min-height: 590px;
+  max-height: 740px;
+  padding-bottom: 10px;
+}
+
+.mainImg {
+  margin-top: 40px;
+  border-radius: 50%;
+  position: absolute;
+  filter: grayscale(75%) brightness(1.3) drop-shadow(2px -12px 15px rgba(0, 0, 0, 0.3))  ;
+  left: -250px;
+  width: 500px;
+  height: 500px;
+  z-index: 1;
+}
+
+.codeImg {
+  filter: blur(0.8px);
+  opacity: 0.5;
+  z-index: -1;
+  transform: rotate(-2.5deg);
+  width: 350px;
+  margin: 205px 0 0 76px;
+}
+.codeImg2 {
+  filter: blur(0.8px);
+  opacity: .55;
+  transform: translate(-22px, -15px) rotate(-2deg);
+}
+.backImgWrapper {
+  display: flex;
+  flex-direction: column;
+}
+.codeImgBack {
+  height: 440px;
+  filter: blur(0.9px);
+  opacity: .7;
+  position: static;
+  z-index: 1;
+  margin-top: -50px;
+  margin-left: 100px;
+  rotate: -20deg;
+}
+.codeImgBack2 {
+  width: 350px;
+  filter: blur(1px);
+  position: static;
+  margin-left: 125px;
+  margin-top: -40px;
+  z-index: 1;
+  rotate: 72deg;
+}
+@media (max-width: 1060px) {
+  .imgWrapper {
+    transition: ease-in-out 0.6s;
+    opacity: 0.4;
+  }
+  
+}

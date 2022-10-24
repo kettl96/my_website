@@ -1,0 +1,104 @@
+.techImg {
+  border-radius: 50%;
+  width: 500px;
+  height: 500px;
+  position: absolute;
+  top: 128px;
+  left: -250px;
+}
+
+@keyframes myOrbit {
+  from {
+    transform: rotate(-370deg) translateY(-260px) rotate(370deg);
+  }
+
+  to {
+    transform: rotate(-10deg) translateY(-260px) rotate(10deg);
+  }
+}
+
+.techBlock {
+  padding: 5px;
+  box-shadow: 2px 1px 5px black;
+  border-radius: 35%;
+  z-index: 2;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 230px;
+  left: 220px;
+  animation: myOrbit 30s linear infinite;
+  transform: translateX(-270px);
+}
+
+.techImg img:nth-child(2) {
+  animation-name: myOrbit;
+  animation-delay: 2s;
+}
+
+.techImg img:nth-child(3) {
+  animation-name: myOrbit;
+  animation-delay: 4s;
+}
+
+.techImg img:nth-child(4) {
+  animation-name: myOrbit;
+  animation-delay: 6s;
+}
+
+.techImg img:nth-child(5) {
+  animation-name: myOrbit;
+  animation-delay: 8s;
+}
+
+.techImg img:nth-child(6) {
+  animation-name: myOrbit;
+  animation-delay: 10s;
+  height: 50px;
+}
+
+.techImg img:nth-child(7) {
+  animation-name: myOrbit;
+  animation-delay: 12s;
+}
+
+.techImg img:nth-child(8) {
+  animation-name: myOrbit;
+  animation-delay: 14s;
+}
+
+.techImg img:nth-child(9) {
+  animation-name: myOrbit;
+  animation-delay: 16s;
+}
+
+.techImg img:nth-child(10) {
+  animation-name: myOrbit;
+  animation-delay: 18s;
+}
+
+.techImg img:nth-child(11) {
+  animation-name: myOrbit;
+  animation-delay: 20s;
+  width: 58px;
+}
+
+.techImg img:nth-child(12) {
+  animation-name: myOrbit;
+  animation-delay: 22s;
+}
+
+.techImg img:nth-child(13) {
+  animation-name: myOrbit;
+  animation-delay: 24s;
+}
+
+.techImg img:nth-child(14) {
+  animation-name: myOrbit;
+  animation-delay: 26s;
+}
+
+.techImg img:nth-child(15) {
+  animation-name: myOrbit;
+  animation-delay: 28s;
+}

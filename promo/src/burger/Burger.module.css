@@ -1,0 +1,124 @@
+.icon {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  width: 50px;
+  height: 25px;
+  cursor: pointer;
+  z-index: 11;
+  padding: 20px 5px 0 5px;
+}
+.icon span::before,
+.icon span::after,
+.icon span {
+  box-shadow: 1px 1px 2px rgb(231, 231, 231);
+  position: absolute;
+  content: '';
+  width: 50px;
+  height: 3px;
+  background-color: white;
+  transition: ease-in-out 0.3s;
+}
+.icon span::before {
+  top: -12px;
+}
+.icon span::after {
+  top: 12px;
+}
+.open span {
+  background-color: transparent;
+  box-shadow: none;
+}
+.open span::after {
+  top: 0;
+  transform: rotate(45deg);
+}
+.open span::before {
+  top: 0;
+  transform: rotate(-45deg);
+}
+
+.wrapper {
+  position: absolute;
+  z-index: 10;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.88);
+  animation: wrapper .5s ease-out;
+}
+.allLinks {
+  position: absolute;
+  top: 30vh;
+  left: 40vw;
+  font-size: 20px;
+  transform: scale(1.2);
+}
+.title {
+  color: rgb(37, 255, 17);
+  margin: 30px 0 20px 0;
+  font-weight: 600;
+  cursor: default;
+}
+.links a {
+  display: flex;
+  flex-direction: column;
+  margin: 25px 0px 35px 0px;
+  text-decoration: none;
+  color: white;
+  transition: ease-in-out 0.3s;
+  font-size: 24px;
+}
+.links a:nth-child(2) {
+  margin-left: 25px;
+}
+.links a:nth-child(3) {
+  margin-left: 60px;
+}
+.links a:hover {
+  transform: scale(1.1);
+}
+.up {
+  animation: up 1s ease-in-out ;
+}
+.down {
+  animation: down 1.8s ease-in-out;
+}
+@keyframes wrapper {
+  0% {
+  transform: rotateX(90deg) ;
+  }
+  100% {
+    transform: rotateX(0deg);
+  }
+}
+@keyframes up {
+  0% {
+    opacity: 0;
+    transform: translateY(-600px) ;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px) ;
+  }
+}
+@keyframes down {
+  0% {
+    opacity: 0;
+    transform: translateY(500px) ;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px) ;
+  }
+}
+
+@media (min-width: 741px) {
+ .icon {
+  display: none;
+ }
+}
+@media (max-width: 420px) {
+  .allLinks {
+    left: 34vw;
+  }
+}
